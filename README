@@ -1,0 +1,56 @@
+About:
+------
+"Real Time Search Indexing" is an application to demonstrate
+the real time indexing of documents. Dynamic indexes are created
+during run time so that up to date information is available
+for searching.
+
+
+Requirements:
+-------------
+1) Clairlib library : http://www.clairlib.org/index.php/Main_Page
+
+2) Documents in the following format:
+
+<DOC>
+<DOCNO>
+10
+</DOCNO>
+<TITLE>
+title goes here
+</TITLE>
+<AUTHOR>
+author name
+</AUTHOR>
+<BIBLIO>
+</BIBLIO>
+<TEXT>
+actual text
+</TEXT>
+</DOC>
+
+
+Running the program
+--------------------
+
+1. rti_engine.pl <threshold value>
+   ex: rti_engine.pl 10
+
+2. ./detectchange.pl <path> <ip_address> <notify duration in seconds>
+   ex: ./detectchange.pl /home/abcd/docs/ 127.0.0.1 3
+
+3. ./index.pl <path to data set>
+
+4. ./query.pl
+
+Third part libs included:
+-------------------------
+
+1) File::Modified : http://search.cpan.org/~corion/File-Modified-0.07/lib/File/Modified.pm
+
+2) Text::WagnerFischer : http://search.cpan.org/~davidebe/Text-WagnerFischer-0.04/WagnerFischer.pm 
+
+License
+--------
+
+This software is distributed under GPL v3.0 license. Please refer to the license copy included.
